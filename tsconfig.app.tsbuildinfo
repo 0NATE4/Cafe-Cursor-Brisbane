@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/types.ts","./src/components/boardheader.tsx","./src/components/cardcover.tsx","./src/components/contributioncard.tsx","./src/components/sociallinks.tsx","./src/data/contributions.ts","./src/pages/boardpage.tsx","./src/pages/detailpage.tsx"],"version":"5.9.3"}
