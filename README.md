@@ -19,7 +19,7 @@ npm run dev
 ## Build for GitHub Pages
 
 ```bash
-VITE_BASE_PATH=/cafe-cursor-board/ npm run build
+VITE_BASE_PATH=/Cafe-Cursor-Brisbane/ npm run build
 cp dist/index.html dist/404.html
 ```
 
