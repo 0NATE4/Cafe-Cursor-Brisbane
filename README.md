@@ -31,15 +31,22 @@ Do **not** work on `main`. Create your own branch (use your name or slug):
 git checkout -b yourname
 ```
 
-### 4. Copy the template
+### 4. Create your JSON file from the template
 
-Duplicate:
+You need a **new file** with your own name. Do **not** edit `_template.json`.
 
-`src/content/contributions/_template.json`
+1. Open `src/content/contributions/_template.json` and **copy all of its contents**.
+2. Create a **new file** next to it: `src/content/contributions/your-slug.json`  
+   (use a short, URL-friendly slug, e.g. `jane-doe`).
+3. **Paste** the copied template into that new file and save.
 
-→ `src/content/contributions/your-slug.json`
+Or in the terminal (replace `jane-doe` with your slug):
 
-Use a short, URL-friendly slug (e.g. `jane-doe`). **Do not edit** `_template.json`.
+```bash
+cp src/content/contributions/_template.json src/content/contributions/jane-doe.json
+```
+
+In Cursor, you can say: *“Create `src/content/contributions/jane-doe.json` using the contents of `_template.json`, then fill in my details.”*
 
 ### 5. Fill in your file
 
@@ -53,6 +60,8 @@ Use a short, URL-friendly slug (e.g. `jane-doe`). **Do not edit** `_template.jso
 | `body` | Longer story; multiple lines are fine |
 | `github`, `linkedin`, `website` | Optional links (leave out if you do not use them) |
 | `coverImage` | Optional; see step 6 |
+
+Edit the **new file** you created in step 4 — not `_template.json`.
 
 See `src/content/contributions/example-contributor.json` for a filled-in example.
 
