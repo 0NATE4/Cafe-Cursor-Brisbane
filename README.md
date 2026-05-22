@@ -2,7 +2,9 @@
 
 **May 23, 2026 · Contribution board**
 
-Add your project as a card on **[cafecursorbrisbane.com](https://cafecursorbrisbane.com/)** by adding one JSON file to this repo.
+Live board: **[cafecursorbrisbane.com](https://cafecursorbrisbane.com/)** · Contribute here: **[github.com/0NATE4/Cafe-Cursor-Brisbane](https://github.com/0NATE4/Cafe-Cursor-Brisbane)**
+
+Add your project as a card by adding one JSON file to this repo (steps below).
 
 ## Add your card
 
