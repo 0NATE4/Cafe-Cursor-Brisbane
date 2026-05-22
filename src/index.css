@@ -60,19 +60,35 @@ a {
   letter-spacing: 0.02em;
 }
 
-.board-header p:not(.board-header__event) {
-  margin: 0.75rem 0 0;
+.board-header__cta {
+  margin-top: 1rem;
+  max-width: 36rem;
+}
+
+.board-header__cta-lead {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--fg);
+}
+
+.board-header__cta-copy {
+  margin: 0.4rem 0 0;
+  color: var(--fg-muted);
+  line-height: 1.5;
+}
+
+.board-header__cta-copy a {
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.board-header__intro {
+  margin: 1.25rem 0 0;
   color: var(--fg-muted);
   max-width: 65ch;
-}
-
-.board-header p a {
-  color: var(--accent);
-  text-decoration: none;
-}
-
-.board-header p a:hover {
-  text-decoration: underline;
+  line-height: 1.5;
 }
 
 .board-grid {

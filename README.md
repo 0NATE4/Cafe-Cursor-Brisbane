@@ -48,3 +48,14 @@ Then set in your JSON:
 Push your changes on a **branch** and open a **pull request** (do not push to `main`). After your PR is merged, the site updates and your card appears on the board.
 
 Not sure how to do that? Ask Nathan :)
+
+## Preview on your machine (optional)
+
+Only if you cloned the repo and want to see your card before opening a PR:
+
+```bash
+npm install
+npm run dev
+```
+
+Then open the local URL shown in the terminal (usually `http://localhost:5173`). You do not need this if you edit files on GitHub in the browser.
