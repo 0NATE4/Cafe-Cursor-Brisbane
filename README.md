@@ -2,13 +2,20 @@
 
 **May 23, 2026 · Contribution board**
 
-Add your project as a card on **[cafecursorbrisbane.com](https://cafecursorbrisbane.com/)** by adding one JSON file in this repo (you are already here).
+Add your project as a card on **[cafecursorbrisbane.com](https://cafecursorbrisbane.com/)** by cloning this repo, adding one JSON file, and opening a pull request.
 
 ## Add your card
 
-### 1. Copy the template
+### 1. Clone this repo
 
-In this repo, duplicate:
+```bash
+git clone https://github.com/0NATE4/Cafe-Cursor-Brisbane.git
+cd Cafe-Cursor-Brisbane
+```
+
+### 2. Copy the template
+
+Duplicate:
 
 `src/content/contributions/_template.json`
 
@@ -16,9 +23,7 @@ In this repo, duplicate:
 
 Use a short, URL-friendly slug (e.g. `jane-doe`). **Do not edit** `_template.json`.
 
-You can do this in GitHub (Add file → Create new file → paste and edit) or on your machine.
-
-### 2. Fill in your file
+### 3. Fill in your file
 
 | Field | What to write |
 | --- | --- |
@@ -29,11 +34,11 @@ You can do this in GitHub (Add file → Create new file → paste and edit) or o
 | `summary` | One paragraph for your detail page |
 | `body` | Longer story; multiple lines are fine |
 | `github`, `linkedin`, `website` | Optional links (leave out if you do not use them) |
-| `coverImage` | Optional; see step 3 |
+| `coverImage` | Optional; see step 4 |
 
 See `src/content/contributions/example-contributor.json` for a filled-in example.
 
-### 3. Optional cover image
+### 4. Optional cover image
 
 Add an image at:
 
@@ -43,19 +48,19 @@ Then set in your JSON:
 
 `"coverImage": "/contributions/your-slug/cover.png"`
 
-### 4. Publish
+### 5. Open a pull request
 
-Push your changes on a **branch** and open a **pull request** (do not push to `main`). After your PR is merged, the site updates and your card appears on the board.
+Commit your changes on a **new branch**, push, and open a **pull request** (do not push to `main`). After your PR is merged, the site updates and your card appears on the board.
 
 Not sure how to do that? Ask Nathan :)
 
 ## Preview on your machine (optional)
 
-Only if you cloned the repo and want to see your card before opening a PR:
+After cloning (step 1), you can preview your card before opening a PR:
 
 ```bash
 npm install
 npm run dev
 ```
 
-Then open the local URL shown in the terminal (usually `http://localhost:5173`). You do not need this if you edit files on GitHub in the browser.
+Then open the local URL shown in the terminal (usually `http://localhost:5173`).
