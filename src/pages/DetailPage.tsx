@@ -12,7 +12,7 @@ export function DetailPage() {
       <main className="page-shell detail-layout">
         <p>Could not find that card.</p>
         <Link className="back-link" to="/">
-          Back to board
+          Back to all projects
         </Link>
       </main>
     );
@@ -21,7 +21,7 @@ export function DetailPage() {
   return (
     <main className="page-shell detail-layout">
       <Link className="back-link" to="/">
-        Back to board
+        Back to all projects
       </Link>
       <article className="detail-card">
         <div className="detail-cover">

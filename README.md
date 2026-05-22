@@ -1,6 +1,8 @@
-# Cafe Cursor Board
+# Cafe Cursor Brisbane
 
-Shared board for Cafe Cursor Brisbane. Add your project as a card on **[cafecursorbrisbane.com](https://cafecursorbrisbane.com/)** by adding one JSON file.
+**May 23, 2026 · Contribution board**
+
+Add your project as a card on **[cafecursorbrisbane.com](https://cafecursorbrisbane.com/)** by adding one JSON file to this repo.
 
 ## Add your card
 

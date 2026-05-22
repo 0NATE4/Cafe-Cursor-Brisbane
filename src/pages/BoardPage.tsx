@@ -6,7 +6,7 @@ export function BoardPage() {
   return (
     <main className="page-shell">
       <BoardHeader />
-      <section className="board-grid" aria-label="Contributions board">
+      <section className="board-grid" aria-label="Cafe Cursor Brisbane contributions">
         {contributions.map((contribution) => (
           <ContributionCard key={contribution.slug} contribution={contribution} />
         ))}
