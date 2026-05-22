@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="canonical" href="https://cafecursorbrisbane.com/" />
+    <title>Redirecting…</title>
+    <script>
+      (function () {
+        var target = new URL("https://cafecursorbrisbane.com/");
+        var prefix = "/__REPO_NAME__";
+        var path = location.pathname;
+        if (path.indexOf(prefix) === 0) {
+          path = path.slice(prefix.length) || "/";
+          target = new URL(path + location.search + location.hash, target.origin);
+        }
+        location.replace(target.href);
+      })();
+    </script>
+    <meta http-equiv="refresh" content="0;url=https://cafecursorbrisbane.com/" />
+  </head>
+  <body>
+    <p>
+      Redirecting to
+      <a href="https://cafecursorbrisbane.com/">cafecursorbrisbane.com</a>…
+    </p>
+  </body>
+</html>
