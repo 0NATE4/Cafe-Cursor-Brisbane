@@ -60,23 +60,18 @@ a {
   letter-spacing: 0.02em;
 }
 
-.board-header p:not(.board-header__event):not(.board-header__cta) {
+.board-header p:not(.board-header__event) {
   margin: 0.75rem 0 0;
   color: var(--fg-muted);
   max-width: 65ch;
 }
 
-.board-header__cta {
-  margin: 1rem 0 0;
-}
-
-.board-header__cta a {
+.board-header p a {
   color: var(--accent);
-  font-weight: 600;
   text-decoration: none;
 }
 
-.board-header__cta a:hover {
+.board-header p a:hover {
   text-decoration: underline;
 }
 
