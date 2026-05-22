@@ -1,11 +1,11 @@
 {
   "slug": "adrian-paul",
   "name": "Adrian Paul",
-  "contribution": "Built QRimb — a free app for climbers to scan gym routes, log sends, and track progress.",
+  "contribution": "QRimb bouldering app.",
   "github": "https://github.com/Filayq",
   "website": "https://qrimb.com",
   "coverImage": "/contributions/adrian-paul/cover.png",
-  "headline": "Scan gym routes. Log sends. Level up your climbing.",
-  "summary": "QRimb is a mobile app that makes indoor climbing easier to explore and track. Scan a QR code at the gym to see route details, log attempts and sends, and follow your XP and progress — free for climbers up to Level 10.",
-  "body": "QRimb exists to build a global home for indoor climbing — starting in Australia, with bouldering, top rope, lead, and more.\n\nClimbers scan route QR codes at participating gyms to see holds, grades, and setters. Every send and attempt feeds into progress tracking so you can see how you're leveling up over time.\n\nThe app is free to use up to Level 10. Optional in-app support helps cover server costs and fund new features. Built with feedback from climbers and gyms."
+  "headline": "Scan routes. Log sends.",
+  "summary": "Free climbing app for gyms.",
+  "body": "Scan QR codes, log sends, track progress."
 }
