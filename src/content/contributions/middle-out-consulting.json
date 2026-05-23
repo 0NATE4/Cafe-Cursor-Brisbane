@@ -1,0 +1,11 @@
+{
+  "slug": "middle-out-consulting",
+  "name": "RAG Chunking Visualizer",
+  "contribution": "A neobrutalist learning lab that shows how RAG chunk size and overlap help or hurt retrieval.",
+  "github": "https://github.com/middle-out-consult/rag-cursor",
+  "linkedin": "https://www.linkedin.com/in/armortimer/",
+  "coverImage": "/contributions/middle-out-consulting/cover.png",
+  "headline": "See your chunks before they break your RAG pipeline",
+  "summary": "RAG Chunking Visualizer is a single-file, client-side tool built for vibe coders and learners who want to understand retrieval config without spinning up a backend. Upload or paste text, drag chunk and overlap sliders, and watch health warnings, pipeline strips, and a live chunk grid update in real time—including overlap highlights, cut maps, and preset comparisons inspired by real-world Broken, Fragmented, Redundant, and Optimal strategies.",
+  "body": "Most RAG tutorials tell you to pick a chunk size and hope for the best. This project makes the tradeoffs visible: zero overlap slices sentences apart, tiny chunks fragment meaning, and greedy overlap burns tokens on duplicate context.\n\nMiddle Out Consulting built the visualizer as a Cafe Cursor Brisbane demo—a neobrutalist split-pane learn mode with guided lessons, a \"How this works\" tour, light and dark themes, and a high-contrast mode for readability. Everything runs in the browser: import documents, export configs, share settings via URL hash, and compare strategies side by side.\n\nThe goal is simple: cause (your sliders) and effect (chunks on screen) stay together so you can tune retrieval with confidence before you wire LangChain or LlamaIndex into production."
+}

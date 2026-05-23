@@ -1,0 +1,11 @@
+{
+  "slug": "jett-baker",
+  "name": "Jett Baker",
+  "contribution": "RAG chat app",
+  "github": "https://github.com/jettpbaker/lexctx",
+  "website": "https://lexctx.vercel.app/",
+  "coverImage": "/contributions/jett-baker/cover.png",
+  "headline": "Chat with your lectures",
+  "summary": "RAG chat app for querying across multiple lectures at once.",
+  "body": "I built LexCtx, a RAG chat app for querying across multiple lecture materials at once. It helps students search course content and get useful answers from their own notes and recordings."
+}

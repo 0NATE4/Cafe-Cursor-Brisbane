@@ -1,0 +1,9 @@
+{
+  "slug": "mosaic-pop",
+  "name": "Mosaic Pop",
+  "contribution": "A relaxing mobile-first tile-collection puzzle prototype.",
+  "coverImage": "/contributions/mosaic-pop/cover.jpg",
+  "headline": "Collect tiles. Restore the mosaic.",
+  "summary": "Mosaic Pop is a mobile-first puzzle prototype where players collect scrambled coloured tiles, place them back onto matching mosaic squares, and advance through a sequence of target colours.",
+  "body": "The board starts as a fixed pixel-art mosaic with glossy bubbles scattered across the wrong squares. Players tap bubbles into a small buffer, then place each tile back onto a matching background square to rebuild the artwork. The prototype includes target-colour progression, simple boosters, fly-to-tray animations, sound toggles, and a compact touch-friendly layout."
+}

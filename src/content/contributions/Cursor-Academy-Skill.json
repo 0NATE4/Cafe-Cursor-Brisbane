@@ -1,0 +1,11 @@
+{
+  "slug": "cursor-academy-skill",
+  "name": "Yujun",
+  "contribution": "Created Cursor Academy as a module of Academic Research Skills to empower scholars with AI-assisted research capabilities.",
+  "github": "https://github.com/AI-CYJ/Cafe-Cursor-Brisbane",
+  "website": "https://cafecursorbrisbane.com/",
+  "coverImage": "/contributions/cursor-academy-skill/cover.png",
+  "headline": "AI-Powered Academic Research & Writing Suite",
+  "summary": "Cursor Academy is part of the Academic Research Skills suite, designed to help scholars draft papers, perform deep literature reviews, and audit citations with absolute logical consistency and anti-hallucination guardrails.",
+  "body": "Cursor Academy bridges the gap between raw AI potential and rigorous scientific publication. Built as a multi-agent framework, it manages the full research lifecycle—from Socratic brainstorming, PRISMA-guided systematic reviews, to LaTeX compilation and full-reference integrity auditing. It empowers researchers to focus on core arguments while letting AI handle formatting and compliance checks, transforming how academia interacts with generative tools."
+}
