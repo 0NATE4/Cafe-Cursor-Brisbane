@@ -1,0 +1,12 @@
+{
+    "slug": "lotus",
+    "name": "David Long",
+    "contribution": "Vocabulary Learning App: Word of the Day",
+    "github": "https://github.com/junlong9",
+    "linkedin": "https://www.linkedin.com/in/david-long-129b50270/",
+    "website": "https://www.linkedin.com/in/david-long-129b50270/",
+    "coverImage": "/contributions/lotus/cover.png",
+    "headline": "Word of the Day",
+    "summary": "Lotus is a minimalist, gamified vocabulary application that transforms active learning into a rewarding daily ritual. The app challenges users to log a new 'word of the day,' automatically generating flashcards via a robust Dictionary API. By linking educational effort to a dynamic virtual plant mechanic—where the plant grows only when 'watered' by daily entries—the app turns vocabulary acquisition into a satisfying digital garden.",
+    "body": "Lotus shifts vocabulary building from passive scrolling to active acquisition. Instead of overwhelming users with standard word lists, Lotus encourages users to submit a new word they discover 'in the wild.' This active input triggers an automated flashcard generation process using a reliable third-party Dictionary API to fetch definitions and examples.\n\nEvery time a user logs a word, they successfully 'water' their virtual digital plant. If a user did not encounter a word that day, they can utilize the fallback feature to log the universal 'featured word of the day.' As the user's personal Word Bank grows, the plant evolves Procedurally through multiple growth stages. The main dashboard features a calendar view that provides satisfying visual feedback, mapping out streaks and historical data of learned words. Lotus follows a freemium model: free users are limited to one unique flashcard per day, while premium users unlock unlimited flashcard creation and exotic plant types."
+  }
