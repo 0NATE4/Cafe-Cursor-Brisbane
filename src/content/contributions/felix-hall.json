@@ -1,0 +1,9 @@
+{
+  "slug": "felix-hall",
+  "name": "Felix Hall",
+  "contribution": "A browser demo that uploads CSVs and runs Edison scientific analysis with live notebook streaming.",
+  "github": "https://github.com/Fhall21/edison-analysis-demo",
+  "headline": "Ask questions of your CSV data",
+  "summary": "Too often AI analysis is vague and can feel like a black box. This is a standalone FastAPI app: upload CSVs (or use bundled sample data), ask a research question, and watch our analysis stream back live notebook cells and downloadable artifacts.",
+  "body": "Built a self-contained Edison Data Analysis demo — no auth layer, just a clean browser UI (leveraging the Edison client SDK).\n\nUpload your own CSVs or click through bundled sample HR data, pose a research question, and the app polls Edison while rendering results in real time. Typical runs take 2–5 minutes; artifacts are downloadable when complete.\n\nStack: Python 3.11+, FastAPI, SSE streaming, Edison client SDK. Deploy target is Lomond Garden — link coming once the site is live."
+}
