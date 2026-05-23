@@ -1,0 +1,11 @@
+{
+  "slug": "dave-lowry",
+  "name": "Dave Lowry",
+  "contribution": "Built Project Spark — a quiz that matches you to demo ideas and exports a Cursor-ready .md brief.",
+  "github": "https://github.com/davelowry",
+  "headline": "Stuck at the cafe? Get sparked.",
+  "coverImage": "/contributions/dave-lowry/cover.png",
+  "cardLink": "/spark",
+  "summary": "Not sure what to build at Cafe Cursor? Project Spark asks about your interests and time, suggests finishable demo ideas, and downloads a markdown brief you can paste straight into Cursor Agent.",
+  "body": "I wanted something useful for everyone sitting there thinking \"what should I make?\" — so I built Project Spark.\n\nAnswer four quick questions (or hit I'm feeling lucky), pick from matched project ideas sized for a cafe session, and download a .md file with MVP features, build steps, and a ready-to-go Cursor prompt.\n\nTry it at /spark on this site, then go build something fun."
+}

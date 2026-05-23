@@ -6,6 +6,7 @@ export type Contribution = {
   linkedin?: string;
   website?: string;
   coverImage?: string;
+  cardLink?: string;
   headline: string;
   summary: string;
   body: string;
