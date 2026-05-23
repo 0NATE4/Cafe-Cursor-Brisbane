@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/AI-CYJ/Cafe-Cursor-Brisbane/Cursor-academy-skill/shared/contracts/passport/researcher_profile.schema.json",
+  "title": "Cursor Academy Researcher Profile Schema",
+  "description": "Defines the consent-gated, opt-in longitudinal researcher profile format in ~/.ars/profile/<profile_id>.yaml.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "profile_id",
+    "created_at",
+    "consent",
+    "style_profile",
+    "recurring_review_signals",
+    "citation_network",
+    "self_reflection_history"
+  ],
+  "properties": {
+    "profile_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "A unique, URL-friendly profile identifier."
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "consent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "store_style_profile",
+        "store_review_history",
+        "store_citation_network",
+        "expiry"
+      ],
+      "properties": {
+        "store_style_profile": { "type": "boolean" },
+        "store_review_history": { "type": "boolean" },
+        "store_citation_network": { "type": "boolean" },
+        "expiry": { "type": "string", "format": "date" }
+      }
+    },
+    "style_profile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_papers", "vocabulary_preferences", "sentence_burstiness"],
+      "properties": {
+        "source_papers": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "vocabulary_preferences": {
+          "type": "object",
+          "additionalProperties": { "type": "string" }
+        },
+        "sentence_burstiness": {
+          "type": "object",
+          "properties": {
+            "mean_length": { "type": "number" },
+            "standard_deviation": { "type": "number" }
+          }
+        }
+      }
+    },
+    "recurring_review_signals": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["pattern", "flagged_in", "last_seen", "severity"],
+        "additionalProperties": false,
+        "properties": {
+          "pattern": { "type": "string" },
+          "flagged_in": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "last_seen": { "type": "string", "format": "date" },
+          "severity": { "enum": ["high", "medium", "low"] }
+        }
+      }
+    },
+    "citation_network": {
+      "type": "object",
+      "required": ["frequent_authors", "field_clusters"],
+      "additionalProperties": false,
+      "properties": {
+        "frequent_authors": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "field_clusters": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "self_reflection_history": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["session", "value", "notes"],
+        "additionalProperties": false,
+        "properties": {
+          "session": { "type": "string" },
+          "value": { "type": "number" },
+          "notes": { "type": "string" }
+        }
+      }
+    }
+  }
+}

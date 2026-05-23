@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/AI-CYJ/Cafe-Cursor-Brisbane/Cursor-academy-skill/shared/contracts/passport/corpus_index_manifest.schema.json",
+  "title": "Cursor Academy Corpus Index Manifest",
+  "description": "Represents the metadata and integrity manifest of the persistent retrieval layer (RAG-over-corpus) in ARS v4.0.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "chunker_version",
+    "embedding_model",
+    "embedding_dimension",
+    "chunk_count",
+    "indexed_at",
+    "content_hash_map"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "4.0.0"
+    },
+    "chunker_version": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The version of the text chunker used, e.g., 'recursive-v1'."
+    },
+    "embedding_model": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Identifier of the embedding model, e.g., 'text-embedding-3-small' or 'cohere-embed-english-v3.0'."
+    },
+    "embedding_dimension": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Dimensionality of the vector space, e.g., 1536."
+    },
+    "chunk_count": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Total number of chunks in the corpus index."
+    },
+    "indexed_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp when the index was last built or updated."
+    },
+    "content_hash_map": {
+      "type": "object",
+      "description": "Mapping from content hash of the literature item (source_pointer / file hash) to chunk-id range or status.",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "ref_slug",
+          "start_chunk_id",
+          "end_chunk_id",
+          "content_hash"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "ref_slug": {
+            "type": "string",
+            "minLength": 1
+          },
+          "start_chunk_id": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "end_chunk_id": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "content_hash": {
+            "type": "string",
+            "pattern": "^sha256:[0-9a-f]{64}$"
+          }
+        }
+      }
+    }
+  }
+}

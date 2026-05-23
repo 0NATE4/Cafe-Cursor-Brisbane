@@ -1,0 +1,34 @@
+---
+description: Checkpoints, 7-mode security checks, and W2 Experiment Lineage verification
+globs: **/*.{md,tex,json,yaml}
+alwaysApply: false
+---
+
+# ARS v4.0: Academic Integrity Gates & Experiment Lineage
+
+This rule defines the validation criteria, checklists, and data consistency gates at the Stage 2.5 and Stage 4.5 boundaries.
+
+## 1. 7-Mode Integrity Checklist (Lu et al. 2026)
+At every integrity checkpoint, the `compliance_agent` must verify that the manuscript does not exhibit any of the 7 automated failure modes:
+1. **Implementation Bugs:** Inconsistencies between described code methodology and executed outputs.
+2. **Hallucinated Results:** Reporting metrics, parameters, or outcomes not found in logs or lineage tracking.
+3. **Shortcut Reliance:** Exploiting leaks, artifacts, or data contamination (e.g., test set leak) for performance gains.
+4. **Bug-as-Insight:** Treating a software error or faulty configuration as a scientific discovery.
+5. **Methodology Fabrication:** Falsifying training bounds, participant counts, study configurations, or hardware settings.
+6. **Frame-Lock:** Overly relying on a single base model's structural bias or failing to explore alternative approaches.
+7. **Citation Hallucinations:** Inventing bibliography entries, authors, or DOIs (triangulate against Crossref/OpenAlex/Semantic Scholar).
+
+## 2. W2 — First-Class Experiment Lineage Validation
+Every numeric claim, table, or figure representing internal experimental outcomes must carry an associated HTML lineage comment: `<!--exp:run_id-->`.
+
+* **Audit Command:** When evaluating a draft with experimental claims, check if `material_passport_lineage.json` contains a matching `run_id`.
+* **Value Verification:** Verify that values claimed in prose match `primary_metrics` within ±0.001 tolerance.
+* **Checksum Matching:** Confirm that any figure or table file path matches the SHA-256 hash registered under `experiment_lineage[].artifacts`.
+* **Discrepancy Action:** If values or hashes mismatch, flag a `[EXP-CLAIM-MISMATCH]` warning and require manual correction.
+
+## 3. Active Domain Pack Application (W6)
+Apply the following domain rules if specified in `passport.yaml`:
+* **Clinical:** Enforce CONSORT / STROBE checklists at Stage 4.5.
+* **Qualitative:** Enforce COREQ checklists and reflexivity statements.
+* **STEM Lab:** Check animal research ARRIVE 2.0 and biological MIQE guidelines.
+* **Humanities:** Enforce Chicago Notes-Bibliography formatting and footnote styles.

@@ -1,0 +1,6 @@
+[
+  {"id": "cit_001", "field": "CS", "ref_slug": "chen2024ai", "exists": true, "label": "valid"},
+  {"id": "cit_002", "field": "CS", "ref_slug": "fake_transformer_2025", "exists": false, "label": "fabricated"},
+  {"id": "cit_003", "field": "Clinical", "ref_slug": "jama_smith_2024", "exists": true, "label": "valid"},
+  {"id": "cit_004", "field": "Clinical", "ref_slug": "lancet_null_2026", "exists": false, "label": "fabricated"}
+]

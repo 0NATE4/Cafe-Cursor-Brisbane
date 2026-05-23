@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/AI-CYJ/Cafe-Cursor-Brisbane/Cursor-academy-skill/shared/contracts/passport/author_entry.schema.json",
+  "title": "Material Passport Author CRediT Entry",
+  "description": "Represents an author entry in the Material Passport with CRediT roles under ARS v4.0.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "email", "is_corresponding", "credit_roles"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_-]+$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "email": {
+      "type": "string",
+      "format": "email"
+    },
+    "orcid": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{3}[0-9X]$"
+    },
+    "affiliation": {
+      "type": "string"
+    },
+    "is_corresponding": {
+      "type": "boolean"
+    },
+    "credit_roles": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "enum": [
+          "conceptualization",
+          "data-curation",
+          "formal-analysis",
+          "funding-acquisition",
+          "investigation",
+          "methodology",
+          "project-administration",
+          "resources",
+          "software",
+          "supervision",
+          "validation",
+          "visualization",
+          "writing-original-draft",
+          "writing-review-editing"
+        ]
+      }
+    }
+  }
+}

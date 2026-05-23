@@ -1,0 +1,23 @@
+mode: fast
+nodes:
+  - id: bibliography
+    agent: bibliography_agent
+    depends_on: []
+    estimated_tokens: 6000
+  - id: outline
+    agent: outline_architect_agent
+    depends_on: [bibliography]
+    estimated_tokens: 4000
+  - id: draft_paper
+    agent: draft_writer_agent
+    args: {section: complete}
+    depends_on: [outline]
+    estimated_tokens: 18000
+  - id: integrity_gate
+    agent: compliance_agent
+    depends_on: [draft_paper]
+    estimated_tokens: 5000
+
+checkpoints:
+  - after: [outline]
+    type: ADVISORY

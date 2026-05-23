@@ -1,0 +1,12 @@
+pack_name: qualitative
+version: 1.0.0
+description: "Qualitative research domain pack supporting COREQ, SRQR, Braun & Clarke thematic analysis, and reflexivity declarations."
+applicable_modes: [full]
+checklists:
+  - id: coreq-32
+    name: "COREQ 32-item Qualitative Checklist"
+    path: references/coreq_checklist.md
+    stage_gate: 4.5
+agents:
+  - name: qualitative_reviewer_agent
+    prompt: "Evaluate researcher reflexivity, thematic depth, saturation criteria, and direct quote attribution integrity."

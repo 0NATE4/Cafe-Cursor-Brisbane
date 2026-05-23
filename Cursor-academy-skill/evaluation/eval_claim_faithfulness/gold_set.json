@@ -1,0 +1,16 @@
+[
+  {
+    "id": "claim_001",
+    "field": "CS",
+    "claim": "Our model achieves 78.4% accuracy.",
+    "source_text": "Transformer baseline achieves 78.4% accuracy under bootstrap.",
+    "supported": true
+  },
+  {
+    "id": "claim_002",
+    "field": "CS",
+    "claim": "We outperform state-of-the-art by 15%.",
+    "source_text": "Transformer baseline is comparable to previous methods within 1%.",
+    "supported": false
+  }
+]

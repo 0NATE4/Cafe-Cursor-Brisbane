@@ -1,0 +1,12 @@
+pack_name: humanities
+version: 1.0.0
+description: "Humanities domain pack supporting Chicago Manual of Style (Notes and Bibliography), MLA 9, and close-reading narrative argumentation reviews."
+applicable_modes: [full]
+checklists:
+  - id: chicago-notes
+    name: "Chicago Notes & Bibliography Style Checklist"
+    path: references/chicago_notes_full.md
+    stage_gate: 4.5
+agents:
+  - name: humanities_arg_agent
+    prompt: "Analyze close reading, historical evidence synthesis, primary archival citations, and narrative transitions."

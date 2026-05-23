@@ -1,0 +1,40 @@
+---
+description: Slash command simulation, intent routing, and 10-stage pipeline orchestration for ARS v4.0
+alwaysApply: true
+---
+
+# ARS v4.0: Intent Routing & Slash Command Simulation
+
+To preserve traditional slash commands in Cursor, map user shortcuts to specified Skill triggers and execution Modes.
+
+## 1. Slash Command Mapping Matrix
+
+| User Shortcut Command | Target Skill Directory | Execution Mode / Focus |
+|:---|:---|:---|
+| `/ars-plan` | `academic-paper` | Socratic guided chapter planning |
+| `/ars-full` | `academic-pipeline` or `academic-paper` | Full end-to-end writing pipeline from Stage 1 |
+| `/ars-outline` | `academic-paper` | Generate structured abstract and headings layout |
+| `/ars-lit-review` | `deep-research` | Literature synthesis, search formulation & PRISMA |
+| `/ars-reviewer` | `academic-paper-reviewer` | 7-agent peer review (EIC + 3 Reviewers + Devil's Advocate) |
+| `/ars-revision` | `academic-paper` | Revise draft following peer review comments |
+| `/ars-revision-coach` | `academic-paper` | Parse reviews and compile an actionable revision roadmap |
+| `/ars-citation-check` | `academic-paper` | Cross-index validation, triangulation and L3-anchoring |
+| `/ars-format-convert` | `academic-paper` | Compile Markdown to LaTeX, PDF, DOCX or APA 7 |
+| `/ars-disclosure` | `academic-paper` | Produce COI and Generative AI disclosure statements |
+| `/ars-status` | `academic-pipeline` | Report the current Stage, Passport state, and reset-ledger |
+
+## 2. Ambiguity & Intent Resolution
+* If the user's request covers multiple phases (e.g., "Review this outline and write the introduction"), pause and prompt for clarification. Do not run the pipeline orchestrator on ambiguous cross-phase inputs.
+* Default to `/ars-plan` if the user is starting a brand new topic with no prior artifacts.
+* Invoke `academic-pipeline` at Stage 2.5 (mid-entry) if the user supplies a pre-existing draft but no material passport.
+
+## 3. Full 10-Stage Pipeline Lifecycle
+When running a full pipeline or checking status, always identify the active stage:
+1. **Stage 1 (RESEARCH):** Socratic Questioning & Bibliography curation (`deep-research`)
+2. **Stage 2 (WRITE):** Chapter Draft Generation & Material Passport initialization (`academic-paper`)
+3. **Stage 2.5 (INTEGRITY):** Stage 2 Hard Gate reference verification & citation checks (`compliance_agent`)
+4. **Stage 3 (REVIEW):** Comprehensive multi-agent peer review (`academic-paper-reviewer`)
+5. **Stage 4 (REVISE):** Revision roadmapping & structured editing (`academic-paper`)
+6. **Stage 4.5 (FINALITY):** Re-review verification & final reference audit gates (`compliance_agent`)
+7. **Stage 5 (FINALIZE):** Template formatting & LaTeX/PDF publication packaging (`formatter_agent`)
+8. **Stage 6 (SUMMARY):** Local analytics generation & AI self-reflection log (`telemetry_auditor`)

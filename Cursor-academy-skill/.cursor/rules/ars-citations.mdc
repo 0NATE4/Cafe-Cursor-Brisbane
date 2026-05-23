@@ -1,0 +1,34 @@
+---
+description: Citation standards, three-layer locator anchors, and Zhao et al. 2026 L3 claim faithfulness validation rules
+globs: **/*.{md,tex,txt}
+alwaysApply: false
+---
+
+# ARS v4.0: Citation Standards & L3 Claim Faithfulness
+
+This rule enforces citation accuracy to eliminate hallucinations, resolving the "L3 claim-faithfulness gap" (Zhao et al. arXiv:2605.07723).
+
+## 1. Three-Layer Citation Emission
+Every citation added to a manuscript draft MUST adhere to the v3.7.3 / v3.8 locator anchor format. Format: `[Citation]<!--ref:slug--><!--anchor:kind:value-->` directly inside the text.
+
+### Anchor Matrix:
+* **`quote`:** `<!--anchor:quote:URL_Encoded_String_Max_25_Words-->` (Provides exact quote verbatim).
+* **`page`:** `<!--anchor:page:Page_Number-->` (Provides exact page number, e.g., `12`).
+* **`section`:** `<!--anchor:section:Section_Name-->` (E.g., `Methods`).
+* **`paragraph`:** `<!--anchor:paragraph:p-4-12-->`.
+* **`none`:** `<!--anchor:none:-->` (Only allowed if no precise locator is possible; flags `[UNVERIFIED-CITATION]` warning).
+
+### Example Citation:
+```markdown
+Our baseline model achieves 78.4% top-1 accuracy (Chen et al. 2024)<!--ref:chen2024ai--><!--anchor:quote:Transformer%20baseline%20achieves%2078.4%25%20accuracy--> when trained on ImageNet-1k.
+```
+
+## 2. L3 Claim-Faithfulness Audit (`ARS_CLAIM_AUDIT=1`)
+Before formatting or compilation, run the alignment validator to compare the claimed prose against the cited reference:
+* **Supported:** No action required.
+* **Overclaim/Unsupported:** Triggers `[EXP-CLAIM-MISMATCH]` warning. Downgrade assertion or correct source details.
+* **Fabricated Reference:** Triggers `[FABRICATED-REFERENCE]` HIGH-WARN gate-refuse. Remove or replace citation.
+
+## 3. Persistent Retrieval RAG Integration (W1)
+* When retrieving context to draft a section or audit a citation, run the RAG layer by calling `python scripts/corpus_retrieval.py --query "your query"`.
+* Incorporate exact retrieved paragraph strings directly into quote anchors to guarantee absolute factual alignment.

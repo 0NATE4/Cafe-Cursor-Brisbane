@@ -1,0 +1,56 @@
+mode: full
+nodes:
+  - id: bibliography
+    agent: bibliography_agent
+    depends_on: []
+    estimated_tokens: 12000
+  - id: corpus_index
+    agent: corpus_indexer_agent
+    depends_on: [bibliography]
+    estimated_tokens: 0
+  - id: lit_strategy
+    agent: literature_strategist_agent
+    depends_on: [corpus_index]
+    estimated_tokens: 8000
+  - id: outline
+    agent: outline_architect_agent
+    depends_on: [lit_strategy]
+    estimated_tokens: 6000
+  - id: viz_design
+    agent: visualization_agent
+    depends_on: [outline]
+    estimated_tokens: 9000
+  - id: draft_intro
+    agent: draft_writer_agent
+    args: {section: intro}
+    depends_on: [outline]
+    estimated_tokens: 14000
+  - id: draft_methods
+    agent: draft_writer_agent
+    args: {section: methods}
+    depends_on: [outline]
+    estimated_tokens: 12000
+  - id: draft_results
+    agent: draft_writer_agent
+    args: {section: results}
+    depends_on: [outline, draft_methods]
+    estimated_tokens: 15000
+  - id: draft_discussion
+    agent: draft_writer_agent
+    args: {section: discussion}
+    depends_on: [outline, draft_results]
+    estimated_tokens: 14000
+  - id: peer_review
+    agent: reviewer_agent
+    depends_on: [draft_intro, draft_methods, draft_results, draft_discussion]
+    estimated_tokens: 22000
+  - id: integrity_gate
+    agent: compliance_agent
+    depends_on: [peer_review]
+    estimated_tokens: 8000
+
+checkpoints:
+  - after: [outline]
+    type: FULL
+  - after: [draft_discussion]
+    type: FULL

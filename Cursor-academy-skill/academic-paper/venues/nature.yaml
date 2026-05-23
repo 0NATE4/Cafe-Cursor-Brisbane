@@ -1,0 +1,22 @@
+venue: nature
+template:
+  type: word_or_latex
+  url: https://www.nature.com/nature/for-authors/formatting-guide
+  hash: sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+sections_required:
+  - title
+  - abstract
+  - main
+  - methods
+  - references
+  - author_contributions
+  - competing_interests
+  - data_availability
+limits:
+  word_count: 3000
+  references_limit: 50
+cover_letter:
+  required: true
+disclosure:
+  policy_anchor: nature-coi
+  ai_disclosure_required: true

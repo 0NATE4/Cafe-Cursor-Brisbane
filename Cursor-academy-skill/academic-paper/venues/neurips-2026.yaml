@@ -1,0 +1,22 @@
+venue: neurips-2026
+template:
+  type: latex
+  url: https://neurips.cc/Conferences/2026/PaperInformation/StyleFiles
+  hash: sha256:d8a2f1c8e9b04f3216839aa72a15c34e89e0b8a21fbc34a8e2e9c1234bcdae7f
+sections_required:
+  - title
+  - abstract
+  - main
+  - checklist  # NeurIPS 2026 Reproducibility Checklist
+  - broader_impact
+limits:
+  main_pages: 9
+  supplementary_pages: unlimited
+checklist:
+  type: neurips_reproducibility_2026
+  path: references/neurips_2026_checklist.md
+cover_letter:
+  required: false
+disclosure:
+  policy_anchor: neurips-2026
+  ai_disclosure_required: true

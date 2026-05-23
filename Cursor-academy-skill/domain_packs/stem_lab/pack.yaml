@@ -1,0 +1,12 @@
+pack_name: stem_lab
+version: 1.0.0
+description: "STEM Lab domain pack for animal research reporting (ARRIVE 2.0) and quantitative biological protocols (MIQE)."
+applicable_modes: [full]
+checklists:
+  - id: arrive-2.0
+    name: "ARRIVE 2.0 Animal Research Checklist"
+    path: references/arrive_2.0_checklist.md
+    stage_gate: 2.5
+agents:
+  - name: stem_protocols_agent
+    prompt: "Ensure PCR, qPCR, sequence data depositions, and physical unit consistency follow MIQE and ARRIVE 2.0 guidelines."
