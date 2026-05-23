@@ -1,0 +1,12 @@
+{
+  "slug": "edwin-balbin",
+  "name": "Edwin Balbin",
+  "contribution": "Android app that helps Peruvian businesses avoid Yape payment scams.",
+  "github": "https://github.com/edlose16b",
+  "linkedin": "https://www.linkedin.com/in/edwincbalbin/",
+  "website": "https://gestiyape.com/",
+  "coverImage": "/contributions/edwin-balbin/cover.jpg",
+  "headline": "Peruvians, stop losing money to fake Yape payments!",
+  "summary": "Gestiyape is an Android app that helps Peruvian businesses avoid Yape payment scams by notifying staff the moment the owner receives a payment.",
+  "body": "Gestiyape is an Android app that helps Peruvian businesses avoid payment scams when customers pay with Yape, Peru’s most popular mobile wallet.\n\nWhen a customer pays, the money goes to the owner’s Yape account. Gestiyape detects each incoming payment and instantly notifies the staff on duty—so they know the owner was actually paid without chasing them on WhatsApp.\n\nYape is everywhere in Peruvian shops, but the owner is not always on the floor. Today, staff often message the owner on WhatsApp and wait for a reply before trusting that a payment went through. That delay opens the door to fake screenshots and lost sales.\n\nGestiyape closes that gap: real-time alerts for the team, fewer scams, and less money left on the table."
+}
