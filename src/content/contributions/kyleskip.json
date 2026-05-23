@@ -1,0 +1,10 @@
+{
+  "slug": "kyleskip",
+  "name": "Kyle Scheepers",
+  "contribution": "Built CricTrack — a mobile-first app for cricket coaches to track sessions and share progress with clients.",
+  "github": "https://github.com/kyleskip",
+  "website": "https://crictrack-b01a9.web.app/dashboard",
+  "headline": "CricTrack — coaching sessions made simple",
+  "summary": "CricTrack helps cricket coaches manage coaching packages, log session notes, and send clients a read-only share link — no client login required.",
+  "body": "I built CricTrack at Cafe Cursor Brisbane to solve a real coaching workflow: track packages and sessions on the go, then give parents and players a simple link to see progress.\n\nCoaches sign in with Firebase Auth, manage kids and session blocks from a mobile-first dashboard, and generate share links that sync from Firestore in real time. Clients open the link and see their current package only — no account needed.\n\nStack: React, TypeScript, Vite, Firebase Auth, Firestore, Cloud Functions, and Stripe for subscriptions.\n\nLive app: https://crictrack-b01a9.web.app/dashboard"
+}
