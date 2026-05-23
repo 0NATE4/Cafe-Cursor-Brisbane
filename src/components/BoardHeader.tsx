@@ -11,7 +11,7 @@ export function BoardHeader() {
       <div className="board-header__cta">
         <p className="board-header__cta-lead">Want your project on the board?</p>
         <p className="board-header__cta-copy">
-          Add what you built{" "}
+          Add what you built {" "}
           <a href={REPO_URL} target="_blank" rel="noopener noreferrer">
             here
           </a>

@@ -8,11 +8,9 @@ type ContributionCardProps = {
 };
 
 export function ContributionCard({ contribution }: ContributionCardProps) {
-  const destination = contribution.cardLink ?? `/c/${contribution.slug}`;
-
   return (
     <article className="contribution-card">
-      <Link to={destination} className="card-link">
+      <Link to={`/c/${contribution.slug}`} className="card-link">
         <div className="card-cover">
           <CardCover coverImage={contribution.coverImage} name={contribution.name} />
         </div>
