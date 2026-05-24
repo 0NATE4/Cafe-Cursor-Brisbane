@@ -233,11 +233,24 @@ a {
 @media (min-width: 640px) {
   .board-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem;
+  }
+
+  .card-content h2 {
+    font-size: clamp(1.05rem, 0.9rem + 0.55vw, 1.35rem);
+  }
+
+  .card-content p {
+    font-size: clamp(0.9375rem, 0.85rem + 0.25vw, 1.05rem);
+  }
+
+  .card-cover-default img {
+    width: clamp(84px, 10vw, 112px);
   }
 }
 
 @media (min-width: 1024px) {
-  .board-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+  .page-shell {
+    width: min(1200px, 100% - 2rem);
   }
 }
